@@ -14,7 +14,17 @@ class AvailabilityCheckIkea(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
 
 
-    def parse(self, response):
-        delivery_status = response.xpath('//*[@id="content"]/div/div[1]/div/div[2]/div[3]/div/div[4]/div[1]/div/span[2]')
-        store_status = response.xpath('//*[@id="content"]/div/div[1]/div/div[2]/div[3]/div/div[4]/div[2]/div/span[2]')
+    def parse(self, page):
+        
+        PRODUCT_NAME = 'div.range-revamp-header-section__title--big ::text'
+        ERROR_BUTTON = 'span.range-revamp-stockcheck__status--error'
+        
+        avalable = False
+        if page.css(ERROR_BUTTON).get() is not None:
+            avalable = True
+
+        yield {
+            'product':page.css(PRODUCT_NAME).get(),
+            'available':avalable
+        }
         
