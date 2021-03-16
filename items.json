@@ -1,5 +1,6 @@
 [
-{"product": "J\u00c4RVFJ\u00c4LLET", "available": true},
-{"product": "J\u00c4RVFJ\u00c4LLET", "available": true},
-{"product": "MARKUS", "available": true}
+{"product": "J\u00c4RVFJ\u00c4LLET", "delivery": false},
+{"product": "J\u00c4RVFJ\u00c4LLET", "delivery": false},
+{"product": "MARKUS", "delivery": false},
+{"product": "ANTILOP", "delivery": false}
 ]

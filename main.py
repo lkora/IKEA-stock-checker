@@ -9,4 +9,4 @@ process = CrawlerProcess(settings={
 })
 
 process.crawl(AvailabilityCheckIkea)
-process.start() # the script will block here until the crawling is finished
+process.start()
