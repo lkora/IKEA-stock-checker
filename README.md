@@ -16,30 +16,29 @@ Script reads page responses for all the product links given in the file periodic
 
 ## Output
 
-    ------------------------------------------------
+        Item:
+         id: 70261150
+         url: https://www.ikea.com/rs/sr/p/markus-kancelarijska-stolica-vissle-tamnosiva-70261150/
+         name: MARKUS
+         type: Kancelarijska stolica
+         design: Vissle tamnosiva
+         currency_code: RSD
+         price_incl_vat: 14999
+         price_no_vat: 12499.17
+         revamp_price: 14999
+         in_stock_range_code: YES
+         in_stock_available: 0
+         restock_date_time: 2021-03-27
+         restock_date_time_period: DAY
 
-    Item:
-     id: 30363594
-     url: https://www.ikea.com/rs/sr/p/jaervfjaellet-kancelarijska-stolica-gunnared-tamnosiva-30363594/
-     name: JÄRVFJÄLLET
-     type: Kancelarijska stolica
-     design: Gunnared tamnosiva
-     currency_code: RSD
-     price_incl_vat: 18999
-     price_no_vat: 15832.5
-     revamp_price: 18999
-     in_stock_range_code: YES
-     in_stock_available: 17
-     restock_date_time: 
-     restock_date_time_period: 
+        Stock forecast:
+        Date: 2021-03-20 	When: DAY 	NoAvailable: 0 	Where: STORE 	Probability: LOW
+        Date: 2021-03-21 	When: DAY 	NoAvailable: 0 	Where: STORE 	Probability: LOW
+        Date: 2021-03-22 	When: DAY 	NoAvailable: 0 	Where: STORE 	Probability: LOW
+        Date: 2021-03-23 	When: DAY 	NoAvailable: 0 	Where: STORE 	Probability: LOW
 
-    Stock forecast:
-    Date: 2021-03-20 	When: DAY 	NoAvailable: 16 	Where: STORE 	Probability: HIGH
-    Date: 2021-03-21 	When: DAY 	NoAvailable: 25 	Where: STORE 	Probability: HIGH
-    Date: 2021-03-22 	When: DAY 	NoAvailable: 25 	Where: STORE 	Probability: HIGH
-    Date: 2021-03-23 	When: DAY 	NoAvailable: 25 	Where: STORE 	Probability: HIGH
+        ------------------------------------------------
 
-    ------------------------------------------------
 
 
 
