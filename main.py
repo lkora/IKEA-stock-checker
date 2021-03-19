@@ -2,14 +2,13 @@ import requests as rq
 import json
 from bin.classes.Item import Item
 from bin.classes.StockForecast import StockForecast
-from bin.check_request_status import check_request_status
+from bin.request_is_valid import request_is_valid
 
 def print_split():
     print("\n------------------------------------------------\n")
 
 '''
 ## TODO:
-#   Rewrite check_request_status to work better with requests
 #   Move main snippets to functions
 #   Implement product generated url
 #   Implement read list of urls from file
@@ -21,10 +20,13 @@ def print_split():
 
 def main():
     url = "https://www.ikea.com/rs/sr/products/594/30363594.json"
-    if check_request_status(url):
+    if request_is_valid(url):
         data = rq.get(url).content
         product_dict = json.loads(data)
         # print(product_dict)
+    else:
+        print("Bad request or bad response!\n URL: '" + url + "'")
+        exit()
 
     item = Item()
     item.id = int(product_dict['id'])

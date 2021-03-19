@@ -1,6 +1,6 @@
 import requests as rq
 
-def check_request_status(url):
+def request_is_valid(url):
     exception_raised = False
     try:
         response = rq.get(url)

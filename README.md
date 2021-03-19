@@ -40,7 +40,7 @@ Script reads page responses for all the product links given in the file periodic
 
 
 ## TODO ##
-- [ ] Rewrite check_request_status to work better with requests
+- [x] Rewrite request_is_valid to give clearer information
 - [ ] Move main snippets to functions
 - [ ] Implement product generated url
 - [ ] Implement read list of urls from file
