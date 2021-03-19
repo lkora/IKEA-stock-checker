@@ -48,10 +48,11 @@ Script reads page responses for all the product links given in the file periodic
 - [x] Rewrite request_is_valid to give clearer information
 - [x] Move main snippets to functions
 - [x] Implement product generated url
-- [ ] Implement read list of urls from file
+- [x] Implement read list of urls from file
 - [ ] Implement E-mail notification
 - [ ] Create shell script that will call this periodically
-- [ ] Figure out ART meaning 
+- [ ] Make a web page to make it more seamless
+- [ ] Figure out ART meaning
 - [ ] Make it global
 
 

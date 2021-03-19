@@ -2,7 +2,6 @@ from bin.get_data import get_data
 
 '''
 ## TODO:
-#   Implement read list of urls from file
 #   Implement E-mail notification
 #   Create shell script that will call this periodically
 #   Figure out ART meaning 
@@ -10,7 +9,9 @@ from bin.get_data import get_data
 
 
 def main():
-    get_data()
+    item_list = open("./item_list.txt", "r")
+    get_data(item_list)
+    item_list.close()
     
     
 
