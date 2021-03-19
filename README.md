@@ -20,7 +20,7 @@ Script reads page responses for all the product links given in the file periodic
 
     Item:
      id: 30363594
-     url: https://www.ikea.com/rs/sr/p/ jaervfjaellet-kancelarijska-stolica-gunnared-tamnosiva-30363594/
+     url: https://www.ikea.com/rs/sr/p/jaervfjaellet-kancelarijska-stolica-gunnared-tamnosiva-30363594/
      name: JÄRVFJÄLLET
      type: Kancelarijska stolica
      design: Gunnared tamnosiva
