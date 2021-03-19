@@ -47,7 +47,7 @@ Script reads page responses for all the product links given in the file periodic
 ## TODO ##
 - [x] Rewrite request_is_valid to give clearer information
 - [x] Move main snippets to functions
-- [ ] Implement product generated url
+- [x] Implement product generated url
 - [ ] Implement read list of urls from file
 - [ ] Implement E-mail notification
 - [ ] Create shell script that will call this periodically
