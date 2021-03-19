@@ -1,9 +1,9 @@
 import requests as rq
 
-def request_is_valid(url):
+def request_is_valid(url, headers):
     exception_raised = False
     try:
-        response = rq.get(url)
+        response = rq.get(url, headers=headers)
     except rq.HTTPError as http_err:
         print(f"HTTP Error: {http_err}")
         exception_raised = True
