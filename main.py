@@ -1,6 +1,7 @@
 import requests as rq
 import json
-from bin.classes.item import Item, StockForecast
+from bin.classes.Item import Item
+from bin.classes.StockForecast import StockForecast
 from bin.check_request_status import check_request_status
 
 def print_split():
@@ -42,9 +43,11 @@ def main():
           'Contract' : "37249",
           'Consumer' : "MAMMUT#pip-range"
         }
+    
     data = rq.get(url, headers=headers).content
     product_dict = json.loads(data)['StockAvailability']
 
+    # Stock forecast
     available_stock_forecast = product_dict['AvailableStockForecastList']['AvailableStockForecast']
     for day in available_stock_forecast:
         available_stock = day['AvailableStock']['$']
@@ -61,7 +64,18 @@ def main():
         item.stock_forecast.append(day_forecast)
         item.stock_forecast_days += 1
         # day_forecast.print_forecast()
-    
+    # Stock
+    retail_item_availability = product_dict['RetailItemAvailability']
+    item.in_stock_range_code = retail_item_availability['InStockRangeCode']['$']
+    item.in_stock_available = int(retail_item_availability['AvailableStock']['$'])
+    if not item.is_in_stock():
+        # Get restock date
+        item.restock_date_time = retail_item_availability['RestockDateTime']['$']
+        item.restock_date_time_period = retail_item_availability['RestockDateTimeType']['$']
+    else:
+        item.restock_date_time = ""
+        item.restock_date_time_period = ""
+
     # Print the result so far
     print_split()
     item.print_item()
