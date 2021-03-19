@@ -17,7 +17,7 @@ class Item:
         
 
     def print_item(self):
-        print("item:",
+        print("Item:\n",
               f"\tid: {self.id}\n",
               f"\turl: {self.url}\n",
               f"\tname: {self.name}\n",
