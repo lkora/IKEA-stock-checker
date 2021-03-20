@@ -3,7 +3,18 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
-def send_mail(sender, recipient, message):
+def send_mail(sender, recipient, content):
+    r"""Sends an E-Mail (sends content from sender to recipient).
+
+    :param: `sender`: :pair:(:str:e-mail, :str:password) for the sender of the email.
+
+    :param: `recipient`: :str:e-mail of the recipient
+        
+    :param: `content`: :dict:{:str:subject, :str:text}.
+
+    :return: void
+    """
+
     ssl_port = 465 # SSL
     smtp_server = "smtp.gmail.com"
 
